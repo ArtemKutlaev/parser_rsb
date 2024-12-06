@@ -18,6 +18,7 @@ db.commit()
 def clear_database():
     #Функция для очистки базы данных.
     c.execute('DELETE FROM rsb') 
+    c.execute('DELETE FROM sqlite_sequence WHERE name="rsb"')
     db.commit()
     
 
